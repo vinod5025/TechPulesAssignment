@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: wallet-system
+
+  datasource:
+    url: jdbc:h2:mem:walletdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+jwt:
+  secret: VGhpc0lzQVNlY3JldEtleUZvcldhbGxldFN5c3RlbTEyMzQ1Njc=
+  expiration: 86400000
